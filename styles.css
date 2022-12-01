@@ -1,0 +1,148 @@
+:root {
+    /* value from frontend mentor task */
+    --color-text : hsl(200, 15%, 8%);
+    --color-input: hsl(0, 0%, 52%);
+    --color-background: hsl(0, 0%, 98%);
+    /* --color-white: hsl(0, 0%, 100%); */
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: var(--color-background);
+    color: var(--color-text);
+    font-size: 14px;
+    font-family: "Nunito Sans", sans-serif;
+    padding: 0 32px;
+}
+
+header, main, .filters {
+    max-width: 1280px;
+    margin: 32px auto 64px;
+}
+
+header { 
+    display: flex;
+    justify-content: space-between;
+    /* margin: 64px auto; */
+}
+
+header button {
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.filters {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2%; 
+}
+
+.filters.hidden {
+    display: none;
+}
+
+#query {
+    background-color: var(--color-background);
+    border: none;
+    box-shadow: 0px 5px 10px -5px rgb(66 68 90);
+    padding: 15px 30px;
+
+}
+
+ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 70px;
+    list-style: none;
+}
+
+li {
+    border-radius: 10px;
+    box-shadow: 0px 10px 10px -8px rgb(66 68 90);
+    overflow: hidden;
+}
+
+li a {
+    text-decoration: none;
+    color: var(--color-text);
+}
+
+li img {
+    aspect-ratio: 320/213;
+    width: 100%;
+}
+
+/* detailed info container about country */
+.info-container {
+    padding-bottom: 10px;
+}
+
+/* non detailed info container about country */
+.short-info-container {
+    padding: 10px;
+}
+
+.detail-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.country-name {
+    display: block;
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+.detail-button {
+    padding: 7px 15px;
+    margin: 10px 3px;
+    background: transparent;
+    display: inline-block;
+    box-shadow: 0px 5px 10px -5px rgb(66 68 90);
+    border-radius: 10%;
+    color: var(--color-text);
+    text-decoration: none;
+}
+
+.go-back-button {
+    margin-bottom: 25px
+}
+
+
+@media screen and (max-width: 1000px) {
+    ul {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    ul {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .info-container {
+        padding: 10px;
+    }
+
+    .detail-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    ul {
+        grid-template-columns: 1fr;
+    }
+
+    .info-container {
+        padding: 10px;
+    }
+}
+
