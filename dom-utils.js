@@ -113,7 +113,7 @@ const createBorderCountriesElement = (country) => {
     borderCountriesContainer.appendChild(labelElement);
 
     country.borders.forEach(border => {
-        borderCountriesContainer.appendChild(createDetailButton(border, "/?country=" + border));
+        borderCountriesContainer.appendChild(createDetailButton(border, "/nationalities-API/?country=" + border));
     });
 
     return borderCountriesContainer;
@@ -128,6 +128,6 @@ export const renderCountriesList = (countries) => {
 
 export const renderCountryDetails = (country) => {
     const rootElement = document.querySelector("#root");
-    rootElement.appendChild(createDetailButton("Go back", "/"));
+    rootElement.appendChild(createDetailButton("Go back", "/nationalities-API/"));
     rootElement.appendChild(createDetailElement(country));
 }
