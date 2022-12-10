@@ -1,3 +1,3 @@
 # nationalities-API
 
-Link: https://github.com/MichalKaniowski/nationalities-API
+Link: https://michalkaniowski.github.io/nationalities-API/
